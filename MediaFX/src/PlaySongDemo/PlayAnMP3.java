@@ -28,7 +28,8 @@ public class PlayAnMP3 extends Application {
   @Override
   public void start(Stage stage) throws Exception {
     BorderPane pane = new BorderPane();
-    String path = "songfiles/Capture.mp3";
+    //I Annie Villarreal changed the song to play Danse Macabre
+    String path = "songfiles/DanseMacabreViolinHook.mp3";
     pane.setCenter( new Label(path));
     playASong(path);
     // Put the pane in a sized Scene and show the GUI
@@ -51,7 +52,8 @@ public class PlayAnMP3 extends Application {
     mediaPlayer.play();
       
     mediaPlayer.setOnEndOfMedia(new Waiter());
-    System.out.println("You may need to shut this App down");
+    //I Annie Villarreal added to the print statement
+    System.out.println("You may need to shut this App down if it continues running after executing");
  
     }
   
@@ -59,7 +61,8 @@ public class PlayAnMP3 extends Application {
     @Override
     public void run() {
       songsPlayed++;
-      System.out.println("Song ended, play song #" + songsPlayed);
+      //I Annie Villarreal changed the print statement
+      System.out.println("Selected song ended, play song #" + songsPlayed);
       Platform.exit();
     }
   }
